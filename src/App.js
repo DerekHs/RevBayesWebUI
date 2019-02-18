@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>Rev Bayes!</p>
-        </header>
+      <div className="container">
+        <div className="tabs">
+          <ul>
+            <li className="is-active"><a>File</a></li>
+            <li><a>Tree Constraints</a></li>`
+            <li><a>Code</a></li>
+          </ul>
+        </div>
       </div>
     );
   }
