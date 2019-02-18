@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/RevBayesInterface/static/css/main.149abebd.chunk.css"
   },
   {
-    "revision": "551ee99b17440725f4ddf84366c17e5e",
+    "revision": "1bca0840f5c8d717459ecb429c48b92e",
     "url": "/RevBayesInterface/index.html"
   }
 ];
