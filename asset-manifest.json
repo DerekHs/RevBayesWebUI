@@ -1,15 +1,15 @@
 {
-  "main.css": "/RevBayesWebUI/static/css/main.149abebd.chunk.css",
-  "main.js": "/RevBayesWebUI/static/js/main.af43ca5d.chunk.js",
-  "main.js.map": "/RevBayesWebUI/static/js/main.af43ca5d.chunk.js.map",
-  "runtime~main.js": "/RevBayesWebUI/static/js/runtime~main.ce704826.js",
-  "runtime~main.js.map": "/RevBayesWebUI/static/js/runtime~main.ce704826.js.map",
-  "static/css/2.74baac4d.chunk.css": "/RevBayesWebUI/static/css/2.74baac4d.chunk.css",
-  "static/js/2.4683f528.chunk.js": "/RevBayesWebUI/static/js/2.4683f528.chunk.js",
-  "static/js/2.4683f528.chunk.js.map": "/RevBayesWebUI/static/js/2.4683f528.chunk.js.map",
-  "index.html": "/RevBayesWebUI/index.html",
-  "precache-manifest.4177426620c91d23fcd918f6dd17314c.js": "/RevBayesWebUI/precache-manifest.4177426620c91d23fcd918f6dd17314c.js",
-  "service-worker.js": "/RevBayesWebUI/service-worker.js",
-  "static/css/2.74baac4d.chunk.css.map": "/RevBayesWebUI/static/css/2.74baac4d.chunk.css.map",
-  "static/css/main.149abebd.chunk.css.map": "/RevBayesWebUI/static/css/main.149abebd.chunk.css.map"
+  "main.css": "/DerekHs/RevBayesWebUI/static/css/main.149abebd.chunk.css",
+  "main.js": "/DerekHs/RevBayesWebUI/static/js/main.b2b15935.chunk.js",
+  "main.js.map": "/DerekHs/RevBayesWebUI/static/js/main.b2b15935.chunk.js.map",
+  "runtime~main.js": "/DerekHs/RevBayesWebUI/static/js/runtime~main.86614fe9.js",
+  "runtime~main.js.map": "/DerekHs/RevBayesWebUI/static/js/runtime~main.86614fe9.js.map",
+  "static/css/2.74baac4d.chunk.css": "/DerekHs/RevBayesWebUI/static/css/2.74baac4d.chunk.css",
+  "static/js/2.4683f528.chunk.js": "/DerekHs/RevBayesWebUI/static/js/2.4683f528.chunk.js",
+  "static/js/2.4683f528.chunk.js.map": "/DerekHs/RevBayesWebUI/static/js/2.4683f528.chunk.js.map",
+  "index.html": "/DerekHs/RevBayesWebUI/index.html",
+  "precache-manifest.9c68621f0b2b1c11f47d14a7429bc0bc.js": "/DerekHs/RevBayesWebUI/precache-manifest.9c68621f0b2b1c11f47d14a7429bc0bc.js",
+  "service-worker.js": "/DerekHs/RevBayesWebUI/service-worker.js",
+  "static/css/2.74baac4d.chunk.css.map": "/DerekHs/RevBayesWebUI/static/css/2.74baac4d.chunk.css.map",
+  "static/css/main.149abebd.chunk.css.map": "/DerekHs/RevBayesWebUI/static/css/main.149abebd.chunk.css.map"
 }

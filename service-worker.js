@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/RevBayesWebUI/precache-manifest.4177426620c91d23fcd918f6dd17314c.js"
+  "/DerekHs/RevBayesWebUI/precache-manifest.9c68621f0b2b1c11f47d14a7429bc0bc.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/RevBayesWebUI/index.html", {
+workbox.routing.registerNavigationRoute("/DerekHs/RevBayesWebUI/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
