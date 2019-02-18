@@ -1,15 +1,15 @@
 {
-  "main.css": "/DerekHs/RevBayesWebUI/static/css/main.149abebd.chunk.css",
-  "main.js": "/DerekHs/RevBayesWebUI/static/js/main.b2b15935.chunk.js",
-  "main.js.map": "/DerekHs/RevBayesWebUI/static/js/main.b2b15935.chunk.js.map",
-  "runtime~main.js": "/DerekHs/RevBayesWebUI/static/js/runtime~main.86614fe9.js",
-  "runtime~main.js.map": "/DerekHs/RevBayesWebUI/static/js/runtime~main.86614fe9.js.map",
-  "static/css/2.74baac4d.chunk.css": "/DerekHs/RevBayesWebUI/static/css/2.74baac4d.chunk.css",
-  "static/js/2.4683f528.chunk.js": "/DerekHs/RevBayesWebUI/static/js/2.4683f528.chunk.js",
-  "static/js/2.4683f528.chunk.js.map": "/DerekHs/RevBayesWebUI/static/js/2.4683f528.chunk.js.map",
-  "index.html": "/DerekHs/RevBayesWebUI/index.html",
-  "precache-manifest.9c68621f0b2b1c11f47d14a7429bc0bc.js": "/DerekHs/RevBayesWebUI/precache-manifest.9c68621f0b2b1c11f47d14a7429bc0bc.js",
-  "service-worker.js": "/DerekHs/RevBayesWebUI/service-worker.js",
-  "static/css/2.74baac4d.chunk.css.map": "/DerekHs/RevBayesWebUI/static/css/2.74baac4d.chunk.css.map",
-  "static/css/main.149abebd.chunk.css.map": "/DerekHs/RevBayesWebUI/static/css/main.149abebd.chunk.css.map"
+  "main.css": "/RevBayesInterface/static/css/main.149abebd.chunk.css",
+  "main.js": "/RevBayesInterface/static/js/main.b6aaf14d.chunk.js",
+  "main.js.map": "/RevBayesInterface/static/js/main.b6aaf14d.chunk.js.map",
+  "runtime~main.js": "/RevBayesInterface/static/js/runtime~main.48eb2d66.js",
+  "runtime~main.js.map": "/RevBayesInterface/static/js/runtime~main.48eb2d66.js.map",
+  "static/css/2.74baac4d.chunk.css": "/RevBayesInterface/static/css/2.74baac4d.chunk.css",
+  "static/js/2.4683f528.chunk.js": "/RevBayesInterface/static/js/2.4683f528.chunk.js",
+  "static/js/2.4683f528.chunk.js.map": "/RevBayesInterface/static/js/2.4683f528.chunk.js.map",
+  "index.html": "/RevBayesInterface/index.html",
+  "precache-manifest.8879a898e3f3f5249501791beb2bc250.js": "/RevBayesInterface/precache-manifest.8879a898e3f3f5249501791beb2bc250.js",
+  "service-worker.js": "/RevBayesInterface/service-worker.js",
+  "static/css/2.74baac4d.chunk.css.map": "/RevBayesInterface/static/css/2.74baac4d.chunk.css.map",
+  "static/css/main.149abebd.chunk.css.map": "/RevBayesInterface/static/css/main.149abebd.chunk.css.map"
 }
