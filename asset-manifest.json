@@ -1,15 +1,15 @@
 {
-  "main.css": "/revBayes/static/css/main.149abebd.chunk.css",
-  "main.js": "/revBayes/static/js/main.d60299b6.chunk.js",
-  "main.js.map": "/revBayes/static/js/main.d60299b6.chunk.js.map",
-  "runtime~main.js": "/revBayes/static/js/runtime~main.afdf607a.js",
-  "runtime~main.js.map": "/revBayes/static/js/runtime~main.afdf607a.js.map",
-  "static/css/2.74baac4d.chunk.css": "/revBayes/static/css/2.74baac4d.chunk.css",
-  "static/js/2.4683f528.chunk.js": "/revBayes/static/js/2.4683f528.chunk.js",
-  "static/js/2.4683f528.chunk.js.map": "/revBayes/static/js/2.4683f528.chunk.js.map",
-  "index.html": "/revBayes/index.html",
-  "precache-manifest.61a5a2324a9c23a22d44ac551cdc3005.js": "/revBayes/precache-manifest.61a5a2324a9c23a22d44ac551cdc3005.js",
-  "service-worker.js": "/revBayes/service-worker.js",
-  "static/css/2.74baac4d.chunk.css.map": "/revBayes/static/css/2.74baac4d.chunk.css.map",
-  "static/css/main.149abebd.chunk.css.map": "/revBayes/static/css/main.149abebd.chunk.css.map"
+  "main.css": "/RevBayesWebUI/static/css/main.149abebd.chunk.css",
+  "main.js": "/RevBayesWebUI/static/js/main.af43ca5d.chunk.js",
+  "main.js.map": "/RevBayesWebUI/static/js/main.af43ca5d.chunk.js.map",
+  "runtime~main.js": "/RevBayesWebUI/static/js/runtime~main.ce704826.js",
+  "runtime~main.js.map": "/RevBayesWebUI/static/js/runtime~main.ce704826.js.map",
+  "static/css/2.74baac4d.chunk.css": "/RevBayesWebUI/static/css/2.74baac4d.chunk.css",
+  "static/js/2.4683f528.chunk.js": "/RevBayesWebUI/static/js/2.4683f528.chunk.js",
+  "static/js/2.4683f528.chunk.js.map": "/RevBayesWebUI/static/js/2.4683f528.chunk.js.map",
+  "index.html": "/RevBayesWebUI/index.html",
+  "precache-manifest.4177426620c91d23fcd918f6dd17314c.js": "/RevBayesWebUI/precache-manifest.4177426620c91d23fcd918f6dd17314c.js",
+  "service-worker.js": "/RevBayesWebUI/service-worker.js",
+  "static/css/2.74baac4d.chunk.css.map": "/RevBayesWebUI/static/css/2.74baac4d.chunk.css.map",
+  "static/css/main.149abebd.chunk.css.map": "/RevBayesWebUI/static/css/main.149abebd.chunk.css.map"
 }
