@@ -1,13 +1,13 @@
 {
-  "main.css": "/revBayes/static/css/main.c69cf755.chunk.css",
-  "main.js": "/revBayes/static/js/main.e54ba352.chunk.js",
-  "main.js.map": "/revBayes/static/js/main.e54ba352.chunk.js.map",
-  "runtime~main.js": "/revBayes/static/js/runtime~main.afdf607a.js",
-  "runtime~main.js.map": "/revBayes/static/js/runtime~main.afdf607a.js.map",
-  "static/js/2.063ce5bc.chunk.js": "/revBayes/static/js/2.063ce5bc.chunk.js",
-  "static/js/2.063ce5bc.chunk.js.map": "/revBayes/static/js/2.063ce5bc.chunk.js.map",
-  "index.html": "/revBayes/index.html",
-  "precache-manifest.2da7177a10860630a90ea2b3df5cdab3.js": "/revBayes/precache-manifest.2da7177a10860630a90ea2b3df5cdab3.js",
-  "service-worker.js": "/revBayes/service-worker.js",
-  "static/css/main.c69cf755.chunk.css.map": "/revBayes/static/css/main.c69cf755.chunk.css.map"
+  "main.css": "/RevBayesInterface/static/css/main.149abebd.chunk.css",
+  "main.js": "/RevBayesInterface/static/js/main.ceddf06e.chunk.js",
+  "main.js.map": "/RevBayesInterface/static/js/main.ceddf06e.chunk.js.map",
+  "runtime~main.js": "/RevBayesInterface/static/js/runtime~main.48eb2d66.js",
+  "runtime~main.js.map": "/RevBayesInterface/static/js/runtime~main.48eb2d66.js.map",
+  "static/js/2.063ce5bc.chunk.js": "/RevBayesInterface/static/js/2.063ce5bc.chunk.js",
+  "static/js/2.063ce5bc.chunk.js.map": "/RevBayesInterface/static/js/2.063ce5bc.chunk.js.map",
+  "index.html": "/RevBayesInterface/index.html",
+  "precache-manifest.5fc40cd9a46868019740dc0dbeb1dd6a.js": "/RevBayesInterface/precache-manifest.5fc40cd9a46868019740dc0dbeb1dd6a.js",
+  "service-worker.js": "/RevBayesInterface/service-worker.js",
+  "static/css/main.149abebd.chunk.css.map": "/RevBayesInterface/static/css/main.149abebd.chunk.css.map"
 }
