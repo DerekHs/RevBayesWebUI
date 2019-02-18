@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/RevBayesInterface/precache-manifest.8879a898e3f3f5249501791beb2bc250.js"
+  "/RevBayesInterface/precache-manifest.4e4c94a15c7beb424ecfa0b2b9edde67.js"
 );
 
 workbox.clientsClaim();
