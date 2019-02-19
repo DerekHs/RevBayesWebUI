@@ -5,11 +5,14 @@
   "dependencies": {
     "bulma": "^0.7.4",
     "gh-pages": "^2.0.1",
+    "immutable": "^4.0.0-rc.12",
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.0",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "predeploy": "npm run build",

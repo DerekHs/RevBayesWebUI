@@ -1,13 +1,12 @@
-
-const initialState = new Map({
-    species: ["hippopotamus"],
-    treePartition1: {},
-    treePartition2: {},
-    dataPartition: ""
-  })    
+const initialState = {
+  species: ["hippopottamus"],
+  treePartition1: {},
+  treePartition2: {},
+  dataPartition: ""
+}
 
 const appState = (state = initialState, action) => {
-    return state;
+  return state;
 }
 export default appState;
 
