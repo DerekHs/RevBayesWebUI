@@ -10,7 +10,9 @@ class App extends Component {
     super(props)
     this.state = { active_tab: 1 }
     this.setActiveTab = this.setActiveTab.bind(this)
-  }
+    this.props.addAnimal("turtle")
+  } 
+  
 
   setActiveTab(new_active) {
     this.setState({ active_tab: new_active })
@@ -33,7 +35,6 @@ class App extends Component {
           </ul>
         </div>
         {this.props.appState.species.map(species => <p>{species}</p>)}
-        {this.props.addAnimal("turtle")}
       </div>
     );
   }
