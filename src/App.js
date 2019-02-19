@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -27,9 +30,24 @@ class App extends Component {
               <a onClick={() => this.setActiveTab(3)}>Code</a></li>
           </ul>
         </div>
+        {this.props.appState.species.map(species => <p>{species}</p>)}
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    appState: state.appState
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    
+  },
+    dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
