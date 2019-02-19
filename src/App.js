@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 
+import { addAnimal } from './actions/species.js';
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -31,6 +33,7 @@ class App extends Component {
           </ul>
         </div>
         {this.props.appState.species.map(species => <p>{species}</p>)}
+        {this.props.addAnimal("turtle")}
       </div>
     );
   }
@@ -44,7 +47,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    
+    addAnimal
   },
     dispatch)
 }

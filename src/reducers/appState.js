@@ -10,8 +10,12 @@ const initialState = {
 const appState = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ANIMAL: 
-      return {...state, state.species.concat(action.animal)} 
+      return {...state, species: state.species.concat(action.animal)} 
+    default: 
+      return state;
   }
+  
+  
 }
 export default appState;
 
