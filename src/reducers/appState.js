@@ -1,3 +1,5 @@
+import { ADD_ANIMAL } from '../actions/actions.js';
+
 const initialState = {
   species: ["hippopottamus"],
   treePartition1: {},
@@ -6,7 +8,10 @@ const initialState = {
 }
 
 const appState = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case ADD_ANIMAL: 
+      return {...state, state.species.concat(action.animal)} 
+  }
 }
 export default appState;
 
