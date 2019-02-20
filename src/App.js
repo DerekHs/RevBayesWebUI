@@ -34,7 +34,11 @@ class App extends Component {
               <a onClick={() => this.setActiveTab(3)}>Code</a></li>
           </ul>
         </div>
-        {this.props.appState.species.map(species => <p>{species}</p>)}
+        {this.state.active_tab === 2 && 
+          <div>
+            {this.props.appState.species.map(species => <p>{species}</p>)}
+          </div>
+        }
       </div>
     );
   }
