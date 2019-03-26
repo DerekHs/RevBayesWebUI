@@ -1,2 +1,3 @@
-
+export const REMOVE_CONSTRAINT = "REMOVE_CONSTRAINT";
 export const ADD_ANIMAL = "ADD_ANIMAL";
+export const ADD_CONSTRAINT = "ADD_CONSTRAINT";
