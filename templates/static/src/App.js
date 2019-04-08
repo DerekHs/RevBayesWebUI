@@ -14,6 +14,8 @@ import { resetData, handleConstraintClick } from './components/treeConstraints/h
 // Generate Code Imports
 import GenerateButton from './components/generateCode/GenerateButton.js';
 
+// Parser Imports
+import Parser from "./components/importFiles/Parser";
 
 class App extends Component {
   constructor(props) {
@@ -47,17 +49,18 @@ class App extends Component {
         <h1 className="title">RevScripter</h1>
         <div className="tabs">
           <ul>
-            <li className={this.state.active_tab === 1 && "is-active"}>
+            <li className={this.state.active_tab === 1 ? "is-active" : undefined}>
               <a onClick={() => this.setActiveTab(1)}>File</a>
             </li>
-            <li className={this.state.active_tab === 2 && "is-active"}>
+            <li className={this.state.active_tab === 2 ? "is-active" : undefined}>
               <a onClick={() => this.state.active_tab !== 2 ? this.setActiveTab(2): resetData(this.props.appState.species)}>Tree Constraints</a>
             </li>
-            <li className={this.state.active_tab === 3 && "is-active"}>
-              <a onClick={() => this.setActiveTab(3)}>Code</a></li>
+            <li className={this.state.active_tab === 3 ? "is-active" : undefined}>
+              <a onClick={() => this.setActiveTab(3)}>Code</a>
+            </li>
           </ul>
         </div>
-
+        {this.state.active_tab === 1 && <Parser/>}
 
 
 
