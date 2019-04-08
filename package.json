@@ -8,11 +8,13 @@
     "immutable": "^4.0.0-rc.12",
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
+    "react-beautiful-dnd": "^10.0.4",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.0",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "styled-components": "^4.1.3"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -33,5 +35,8 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "http://DerekHs.github.io/RevBayesInterface"
+  "homepage": "http://DerekHs.github.io/RevBayesInterface",
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
 }
