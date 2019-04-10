@@ -1,13 +1,11 @@
 
 from flask import render_template, Blueprint, request, send_file, jsonify
-from flask_cors import CORS, cross_origin
-import os.path
 import subprocess
 import shlex
 from ..parseWithCPP import execCPP
 
 revscript_blueprint = Blueprint('revscript', __name__)
-CORS(revscript_blueprint)
+
 
 @revscript_blueprint.route('/')
 def index():
