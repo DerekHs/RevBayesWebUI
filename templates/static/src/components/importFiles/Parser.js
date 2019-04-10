@@ -1,11 +1,16 @@
 import React from 'react';
 
+import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
+
+
+import { addAnimal, addConstraint, removeConstraint } from '../../actions/species.js';
+import { resetData } from '../../components/treeConstraints/helperFunction.js';
 
 class Parser extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { imageURL: ''}
-    
+    this.state = {};
 }
 
     onChange(e) {
@@ -26,7 +31,13 @@ class Parser extends React.Component {
         fetch("http://127.0.0.1:5000/api/upload", {
             method: "POST",
             body: formData
-        });
+        
+          }).then(res => res.json())
+          .then(data => {data['TAXA'].map(animal => (
+              this.props.addAnimal(animal)
+          ))});
+
+        resetData(this.props.appState.species)
 
         
     }
@@ -35,8 +46,10 @@ class Parser extends React.Component {
 
   render() {
     return (
-        <div onSubmit={this.onFormSubmit}>
-            <h1>File Upload</h1>
+
+        
+        <div className="file is-large" onSubmit={this.onFormSubmit} style={{position: 'relative'}}>
+          <label className="file-label">
             <input 
                 className="file-input"
                 onChange={(e) => this.onChange(e)}
@@ -45,9 +58,34 @@ class Parser extends React.Component {
                 id="fileUp"
                 multiple
             />
+            <span className="file-cta">
+              <span className="file-label">
+                Choose File(s)...
+              </span>
+            </span>
+          </label>
         </div>
+          
     )
   }
 }
 
-export default Parser
+
+
+function mapStateToProps(state) {
+  return {
+    appState: state.appState
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    addAnimal,
+    addConstraint,
+    removeConstraint
+  },
+    dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Parser);
+

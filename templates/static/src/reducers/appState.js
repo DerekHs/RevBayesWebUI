@@ -1,7 +1,7 @@
 import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT } from '../actions/actions.js';
 
 const initialState = {
-  species: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+  species: [],
   treeConstraints : {
   },
   dataPartition: ""

@@ -18,11 +18,11 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "css-build": "node-sass --omit-source-map-url sass/mystyles.scss public/css/mystyles.css",
     "css-watch": "npm run css-build -- --watch",
     "build": "webpack -p --progress --config webpack.config.js",
+    "production": "webpack -p --progress",
     "dev-build": "webpack --progress -d --config webpack.config.js",
     "watch": "webpack --progress -d --config webpack.config.js --watch",
     "test": "react-scripts test",

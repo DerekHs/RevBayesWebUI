@@ -1,4 +1,5 @@
 from templates import app
 
 app.config.from_object('configurations.DevelopmentConfig')
-app.run()
+if __name__ == '__main__':
+    app.run()   
