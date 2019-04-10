@@ -60,6 +60,7 @@ class App extends Component {
             </li>
           </ul>
         </div>
+       
         {this.state.active_tab === 1 && <Parser/>}
 
 

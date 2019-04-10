@@ -1,50 +1,53 @@
 import React from 'react';
-import { connect } from "react-redux"
-import { bindActionCreators } from 'redux'
-import skulpt from 'skulpt'
+
 
 class Parser extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { selectedFile: null}
-    this.handleselectedFile = this.handleselectedFile.bind(this)
-  }
+    this.state = { imageURL: ''}
+    
+}
 
-  handleselectedFile = event => {
-    this.setState({
-      selectedFile: event.target.files[0].name
-    })
-  }
+    onChange(e) {
+        e.preventDefault();
 
-  parseFile = () => {
-  }
+        let file = document.getElementById('fileUp').files[0];
+        let fileName = file.name;
+
+        console.log(fileName);
+
+        console.log(file);
+        const formData = new FormData();
+    
+
+        formData.append("file", file);
+        formData.append("filename", fileName);
+
+        fetch("http://127.0.0.1:5000/api/upload", {
+            method: "POST",
+            body: formData
+        });
+
+        
+    }
+
+
 
   render() {
-    console.log(this.state.selectedFile)
     return (
-      <div>
-        <input 
-          type="file"
-          multiple
-          onChange={this.handleselectedFile}
-        />
-      </div>
+        <div onSubmit={this.onFormSubmit}>
+            <h1>File Upload</h1>
+            <input 
+                className="file-input"
+                onChange={(e) => this.onChange(e)}
+                type="file"
+                name="file"
+                id="fileUp"
+                multiple
+            />
+        </div>
     )
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     ...
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({
-//     ...
-//   },
-//     dispatch)
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Parser);
 export default Parser
