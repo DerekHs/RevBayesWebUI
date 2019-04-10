@@ -1,5 +1,5 @@
 
-from flask import render_template, Blueprint, request
+from flask import render_template, Blueprint, request, send_file, jsonify
 from flask_cors import CORS, cross_origin
 import os.path
 import subprocess
@@ -13,7 +13,7 @@ CORS(revscript_blueprint)
 def index():
     return render_template("./public/index.html")
 
-@revscript_blueprint.route('/api/upload', methods = ['POST'])
+@revscript_blueprint.route('/api/upload', methods = ['GET', 'POST'])
 def upload_file():
     file = request.files.get('file')
     filename = '/api/upload/' + file.filename
@@ -23,5 +23,7 @@ def upload_file():
 
     execCPP('./nexy', filename)
 
-    return "file uploaded"
+    print('worked')
+    
+    return jsonify({"TAXA" : ['gorilla', 'chimpanzee', 'human', 'orangutan']})
 

@@ -19,13 +19,13 @@ export default class Column extends React.Component {
 
     return (
       <div className="column is-one-third">
-        <div className="box" style={{backgroundColor: '#00d1b2', height: '100%'}}>
+        <div className="box" style={{height: '100%'}}>
           <h2 className="title">
             {this.props.column.title}
           </h2>
           <div className="select is-multiple is-small is-primary is-focused"
               style={{width: '100%', height: '85%'}}>
-            <select id={this.props.column.id} multiple size="20"
+            <select id={this.props.column.id} multiple number="10" size="10"
               style={{width: '100%', height: '100%'}}>
               {this.props.species.map(animal => (
                 <TreeSpecies 
@@ -39,7 +39,7 @@ export default class Column extends React.Component {
             
             <button
               className='button is-primary is-centered'
-              style={{marginTop: '12px', 
+              style={{marginTop: '30px', 
                 backgroundColor: '#f5f5f5',
                 color: '#363636'
               }}
