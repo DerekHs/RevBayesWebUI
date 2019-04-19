@@ -7,7 +7,7 @@
 /templates/static/node_modules/
 /.pnp
 .pnp.js
-templates/public/bundle.js
+*bundle.js
 
 # testing
 /coverage
