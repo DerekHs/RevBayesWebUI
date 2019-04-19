@@ -4,15 +4,21 @@
 /node_modules/*
 /node_modules*
 /node_modules
+/templates/static/node_modules/
 /.pnp
 .pnp.js
+templates/public/bundle.js
 
 # testing
 /coverage
 
 # production
 /build
+<<<<<<< HEAD
 /index.html
+=======
+*.pyc
+>>>>>>> Making changes from the server
 
 # misc
 .DS_Store

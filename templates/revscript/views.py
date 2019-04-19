@@ -14,14 +14,12 @@ def index():
 @revscript_blueprint.route('/api/upload', methods = ['GET', 'POST'])
 def upload_file():
     file = request.files.get('file')
-    filename = '/api/upload/' + file.filename
+   # filename = './api/upload/' + file.filename
 
-    print(file)
-    print(filename)
+  #  print(file)
+ #   print(filename)
 
-    execCPP('./nexy', filename)
+#    execCPP('./nexy', filename)
 
-    print('worked')
-    
-    return jsonify({"TAXA" : ['gorilla', 'chimpanzee', 'human', 'orangutan']})
+    return jsonify({"TAXA" : ['Human', 'Chimpanzee', 'Gorilla', 'Orangutan', 'Gibbon']})
 
