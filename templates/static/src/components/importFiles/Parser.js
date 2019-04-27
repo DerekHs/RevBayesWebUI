@@ -28,14 +28,16 @@ class Parser extends React.Component {
         formData.append("file", file);
         formData.append("filename", fileName);
 
-        fetch("http://127.0.0.1:5000/api/upload", {
+        fetch("http://127.0.0.1:5000/templates/api/upload", {
             method: "POST",
+            mode:'no-cors',
             body: formData
         
           }).then(res => res.json())
           .then(data => {data['TAXA'].map(animal => (
               this.props.addAnimal(animal)
-          ))});
+          ))})
+          .catch(err => console.log(err))
 
         resetData(this.props.appState.species)
 
