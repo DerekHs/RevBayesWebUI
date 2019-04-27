@@ -16,7 +16,7 @@ node_modules
 
 # production
 /build
-/index.html
+*index.html
 *.pyc
 
 # misc
