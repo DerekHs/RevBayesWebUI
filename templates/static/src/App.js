@@ -15,7 +15,10 @@ import { resetData, handleConstraintClick } from './components/treeConstraints/h
 import GenerateButton from './components/generateCode/GenerateButton.js';
 
 // Parser Imports
-import Parser from "./components/importFiles/Parser";
+import Parser from "./components/importFiles/Parser.js";
+
+// Title Import
+import Title from "./components/title/Title.js"
 
 class App extends Component {
   constructor(props) {
@@ -44,19 +47,26 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container"
-        style={{marginTop: '2rem'}}>
-        <h1 className="title">RevScripter</h1>
+      <div className="container">
+      
+        {/* Renders the Title and Subtitle Component */}
+        <Title />
+
+
+        {/* NavBars Of Tabs */}
         <div className="tabs">
           <ul>
             <li className={this.state.active_tab === 1 ? "is-active" : undefined}>
               <a onClick={() => this.setActiveTab(1)}>File</a>
             </li>
             <li className={this.state.active_tab === 2 ? "is-active" : undefined}>
-              <a onClick={() => this.state.active_tab !== 2 ? this.setActiveTab(2): resetData(this.props.appState.species)}>Tree Constraints</a>
+              <a onClick={() => this.setActiveTab(2)}>Substitution Model</a>
             </li>
             <li className={this.state.active_tab === 3 ? "is-active" : undefined}>
-              <a onClick={() => this.setActiveTab(3)}>Code</a>
+              <a onClick={() => this.state.active_tab !== 3 ? this.setActiveTab(3): resetData(this.props.appState.species)}>Tree Constraints</a>
+            </li>
+            <li className={this.state.active_tab === 4 ? "is-active" : undefined}>
+              <a onClick={() => this.setActiveTab(4)}>Code</a>
             </li>
           </ul>
         </div>
@@ -65,14 +75,17 @@ class App extends Component {
 
 
 
+        {/* Substitution Model Tab */}
+        {this.state.active_tab === 2 && <div></div>}
+
+
         {/*  ------------------  */}
         { /* Tree Constraint Tab */}
         {/*  ------------------  */}
         
-        {this.state.active_tab === 2 && 
+        {this.state.active_tab === 3 && 
           <div className="level">
-              <div className="columns is-multiline is-mobile"
-                style={{minWidth: '100%'}}>
+              <div className="columns is-multiline is-mobile">
                 
                 {/* Left Partition Column */}
                 <Column 
@@ -114,39 +127,35 @@ class App extends Component {
                     {/* Name the Tree Constraint */}
                       <input 
                         id="nameTreeConstraint"
-                        style={{marginBottom: '10px'}} 
                         className="input" 
                         type="text" 
                         placeholder="Input Constraint Name">
                       </input>
                     </div>
 
-                    {/* Button to Create Constraint */}
-                    <button 
-                      className="button is-primary is-inverted is-outlined"
-                      style={{backgroundColor: '#3273dc', fontSize: '1.2rem'}}
-                      onClick={() => {
-                        const inputId = document.getElementById("nameTreeConstraint").value;
-                        document.getElementById("nameTreeConstraint").value='';
-                        
-                        this.props.addConstraint(inputId, {inputId: {
-                          'leftPartition': this.state.data.columns['column-1'], 
-                          'rightPartition': this.state.data.columns['column-2'],
-                          }
-                        
-                      })}}
-                    >
-                      Create Constraint
-                    </button>
                   </div>
+
+
+                  {/* Button to Create Constraint */}
+                  <button 
+                    className="button is-primary is-outlined"
+                    onClick={() => {
+                      const inputId = document.getElementById("nameTreeConstraint").value;
+                      document.getElementById("nameTreeConstraint").value='';
+                      
+                      this.props.addConstraint(inputId, {inputId: {
+                        'leftPartition': this.state.data.columns['column-1'], 
+                        'rightPartition': this.state.data.columns['column-2'],
+                        }
+                      
+                    })}}
+                  >
+                    Create Constraint
+                  </button>
 
                   {/* Reset Button calls f: resetData */}
                   <button 
-                    className="button is-primary is-inverted is-outlined"
-                    style={{backgroundColor: '#f5f5f5', 
-                      color: '#363636', 
-                      fontSize: '1.2rem'
-                    }}
+                    className="button is-primary is-outlined"
                     onClick={() => this.setState({...this.state, 
                         data: resetData(this.props.appState.species)})}
                     
@@ -192,7 +201,7 @@ class App extends Component {
         {/*                   */}
         {/* CODE GENERATE TAB */}
         {/*                   */}
-        {this.state.active_tab === 3 && 
+        {this.state.active_tab === 4 && 
           <div className="intro-columns">
             <div className="intro-column is-content">
               <div className='intro-content'>

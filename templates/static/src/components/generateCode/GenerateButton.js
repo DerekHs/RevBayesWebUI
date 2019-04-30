@@ -34,11 +34,8 @@ export default class GenerateButton extends React.Component {
             <div
                 style={{width: '100%'}}
                 align='center'>
-                <div 
-                    className="level">
-                    <p
-
-style={{width: '100%'}}>
+                <div className="level">
+                    <p style={{width: '100%'}}>
 
 
                     {/* Generate Button */}

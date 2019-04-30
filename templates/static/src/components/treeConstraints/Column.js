@@ -23,10 +23,8 @@ export default class Column extends React.Component {
           <h2 className="title">
             {this.props.column.title}
           </h2>
-          <div className="select is-multiple is-small is-primary is-focused"
-              style={{width: '100%', height: '85%'}}>
-            <select id={this.props.column.id} multiple number="10" size="10"
-              style={{width: '100%', height: '100%'}}>
+          <div className="select is-multiple is-small is-primary is-focused">
+            <select id={this.props.column.id} multiple number="10" size="10">
               {this.props.species.map(animal => (
                 <TreeSpecies 
                   key={animal.id} 
@@ -39,10 +37,6 @@ export default class Column extends React.Component {
             
             <button
               className='button is-primary is-centered'
-              style={{marginTop: '30px', 
-                backgroundColor: '#f5f5f5',
-                color: '#363636'
-              }}
               onClick={() => this.handleSelectClick(
                 document.getElementById(this.props.column.id).selectedOptions,
                   this.props.data['columns'][this.props.column.id],

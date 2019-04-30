@@ -1,4 +1,19 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+$coral: #4F6272;
+$darkblue: #666A86;
+$light-grey: #D0CDD7;
+$light-blue: #7EA8BE;
+// Global Variables
+$family-sans-serif: "Nunito", sans-serif;
+
+$grey-dark: $coral;
+$grey-light: $light-grey;
+$primary: $light-blue;
+$link: $light-blue;
+
+// Class Variables
 
 
 @import "../node_modules/bulma/bulma.sass";

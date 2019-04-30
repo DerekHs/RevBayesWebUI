@@ -20,7 +20,7 @@ const config = {
         },
         {
             test: /\.css$/,
-            loader: 'style-loader!css-loader?modules'
+            loader: 'css-loader?modules'
         }]
     }
 };

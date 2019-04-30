@@ -24,8 +24,7 @@ export default class TreeSpecies extends React.Component {
               this.props.data['columns'][destinationId],
               this.props.data['columns']
             )}
-            style={{color: '#000', backgroundColor: '#fff', border: '1px #fff solid'}}
-          >
+           >
             {this.props.animal.name}
           </option> 
        
