@@ -1,4 +1,4 @@
-import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT } from './actions';
+import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT, ADD_SUB_MODEL, ADD_FILE_NAME } from './actions';
 
 export function addAnimal (animal) {
     return {
@@ -18,6 +18,21 @@ export function addConstraint (name, constraint) {
 export function removeConstraint (name) {
     return {
         type: REMOVE_CONSTRAINT,
+        name: name
+    }
+}
+
+export function addSubModel (name, params) {
+    return {
+        type: ADD_SUB_MODEL,
+        name: name,
+        params: params
+    }
+}
+
+export function addFileName (name) {
+    return {
+        type: ADD_FILE_NAME,
         name: name
     }
 }

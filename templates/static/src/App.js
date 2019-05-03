@@ -18,7 +18,11 @@ import GenerateButton from './components/generateCode/GenerateButton.js';
 import Parser from "./components/importFiles/Parser.js";
 
 // Title Import
-import Title from "./components/title/Title.js"
+import Title from "./components/title/Title.js";
+
+// Substitution Model
+import SubChoices from "./components/substitutionModel/SubChoices.js";
+
 
 class App extends Component {
   constructor(props) {
@@ -29,16 +33,17 @@ class App extends Component {
     }
 
     this.setActiveTab = this.setActiveTab.bind(this)
-
     this.handleConstraintClick = this.handleConstraintClick.bind(this)
   } 
 
+
+  // Sets the active tab
   setActiveTab(new_active) {
     this.setState({...this.state, active_tab: new_active })
   }
 
 
-
+  // Handles a constraint click to set the current state
   handleConstraintClick(itemIds, source, destination, columns) {
     this.setState({...this.state, data: {...this.state.data, 
         'columns': handleConstraintClick(itemIds, source, destination, columns)}})
@@ -71,12 +76,14 @@ class App extends Component {
           </ul>
         </div>
        
+
+        {/* Import Files Tab */}
         {this.state.active_tab === 1 && <Parser/>}
 
 
 
         {/* Substitution Model Tab */}
-        {this.state.active_tab === 2 && <div></div>}
+        {this.state.active_tab === 2 && <SubChoices/>}
 
 
         {/*  ------------------  */}

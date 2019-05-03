@@ -1,10 +1,11 @@
-import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT } from '../actions/actions.js';
+import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT, ADD_SUB_MODEL, ADD_FILE_NAME } from '../actions/actions.js';
 
 const initialState = {
   species: [],
-  treeConstraints : {
-  },
-  dataPartition: ""
+  treeConstraints : {},
+  dataPartition: "",
+  subModels: {},
+  files: []
 }
 
 const appState = (state = initialState, action) => {
@@ -16,7 +17,10 @@ const appState = (state = initialState, action) => {
     case REMOVE_CONSTRAINT:
       const { [action.name]: value, ...withoutFirst } = state.treeConstraints;
       return {...state, treeConstraints: withoutFirst}
-    
+    case ADD_SUB_MODEL:
+      return {...state, subModels: {...state.subModels, [action.name]: action.params}}
+    case ADD_FILE_NAME:
+      return {...state, files: state.files.concat(action.name)}
     default: 
       return state;
   }

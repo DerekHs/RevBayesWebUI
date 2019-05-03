@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700");
 /*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -296,7 +296,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Lora", sans-serif; }
 
 code,
 pre {
@@ -834,13 +834,13 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Lora", sans-serif !important; }
 
 .is-family-secondary {
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Lora", sans-serif !important; }
 
 .is-family-sans-serif {
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Lora", sans-serif !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }
@@ -3701,7 +3701,7 @@ a.tag:hover {
     content: "\0227B"; }
 
 .card {
-  background-color: white;
+  background-color: #F9FBFF;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: #4F6272;
   max-width: 100%;

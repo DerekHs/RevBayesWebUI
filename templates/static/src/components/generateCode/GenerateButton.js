@@ -1,7 +1,14 @@
 import React from 'react';
 import { codeGenerate } from './codeGenerate.js'
 
-export default class GenerateButton extends React.Component {
+import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
+
+
+import { addAnimal, addConstraint, removeConstraint } from '../../actions/species.js';
+
+
+class GenerateButton extends React.Component {
 
     constructor(props) {
         super(props);
@@ -64,12 +71,12 @@ export default class GenerateButton extends React.Component {
                         letterSpacing: '0.05em', lineHeight: '1.5', textTransform: 'uppercase',
                         WebKitTransition: '150ms all linear', transition: '150ms all linear'}}  
                         id="json-download" 
-                        data-file="revScript.txt"></a>
+                        data-file='revscript.Rev'></a>
                     <pre 
                         style={{marginTop: '1.5rem'}}
                         className="level">
                        <code 
-                            style={{align: 'left'}}
+                            style={{textAlign: 'left'}}
                             className='resultsContainer'>
                        </code>
                     </pre>
@@ -79,3 +86,23 @@ export default class GenerateButton extends React.Component {
     }
 }
 
+
+
+
+function mapStateToProps(state) {
+    return {
+      appState: state.appState
+    }
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+      addAnimal,
+      addConstraint,
+      removeConstraint
+    },
+      dispatch)
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(GenerateButton);
+  

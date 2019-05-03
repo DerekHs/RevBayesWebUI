@@ -10,7 +10,7 @@ export default class Title extends React.Component {
           <div className="hero-foot">
             <div className="container">
               <h1 className="title is-1">RevScripter</h1>
-              <p class="subtitle">
+              <p className="subtitle">
                 Code generation for <a href="https://revbayes.github.io">RevBayes</a>
               </p>
             </div>
