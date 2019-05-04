@@ -1,5 +1,6 @@
 export const REMOVE_CONSTRAINT = "REMOVE_CONSTRAINT";
 export const ADD_ANIMAL = "ADD_ANIMAL";
 export const ADD_CONSTRAINT = "ADD_CONSTRAINT";
-export const ADD_SUB_MODEL = "ADD_SUB";
+export const ADD_SUB_MODEL = "ADD_SUB_MODEL";
 export const ADD_FILE_NAME = "ADD_FILE_NAME";
+export const REM_SUB_MODEL = "REM_SUB_MODEL"

@@ -38,7 +38,7 @@ class SubChoices extends React.Component {
                         </div>
 
                         <div className="level-item">
-                            <div className="select is-rounded">
+                            <div className="select">
                                 <select>
                                     <option onClick={() => this.setActiveModel(1)}>Jukes-Cantor</option>
                                 </select>
@@ -49,7 +49,7 @@ class SubChoices extends React.Component {
 
 
                 {/* Jukes Cantor Substitution Model Selected */}
-                {this.state.active_model === 1 && <JukesCantor/>}
+                {this.state.active_model === 1 && <JukesCantor />}
             </div>
         )
     }

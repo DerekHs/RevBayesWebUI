@@ -1,3 +1,6 @@
+import './substitutionModels/jukesCantor.js';
+import { jukesCantor } from './substitutionModels/jukesCantor.js';
+
 export function codeGenerate(state) {
     
 
@@ -28,14 +31,15 @@ export function codeGenerate(state) {
     text['monitors'] = '\nmonitors = VectorMonitors()'
     
 
-
     // Check through Substitution Models
-    Object.keys(this.props.appState.subModels).map(key =>
-        {switch(this.props.appState.subModels[key]) {
+    Object.keys(state.subModels).map(key =>
+        {switch(key) {
             case 'JukesCantor':
-                
+                text['jcSub'] = (jukesCantor(state));
+            
                 break;
-            default: return
+            default: 
+                return
         }
         }
     )
