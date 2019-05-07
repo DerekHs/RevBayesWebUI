@@ -19,11 +19,11 @@ export default class Column extends React.Component {
 
     return (
       <div className="column is-one-third">
-        <div className="box" style={{height: '100%'}}>
+        <div className="box">
           <h2 className="title">
             {this.props.column.title}
           </h2>
-          <div className="select is-multiple is-small is-primary is-focused">
+          <div className="select is-multiple">
             <select id={this.props.column.id} multiple number="10" size="10">
               {this.props.species.map(animal => (
                 <TreeSpecies 
@@ -35,7 +35,9 @@ export default class Column extends React.Component {
               ))}
             </select>
             
-            <button
+            
+          </div>
+          <button
               className='button is-primary is-centered'
               onClick={() => this.handleSelectClick(
                 document.getElementById(this.props.column.id).selectedOptions,
@@ -43,8 +45,6 @@ export default class Column extends React.Component {
                   this.props.data['columns'])}              
             >
             Move Across</button>
-          </div>
-            
         </div>
         
       </div>

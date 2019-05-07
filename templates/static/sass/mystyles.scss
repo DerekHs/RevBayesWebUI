@@ -12,10 +12,13 @@ $family-sans-serif: "Lora", sans-serif;
 $grey-dark: $coral;
 $grey-light: $light-grey;
 $primary: $light-blue;
-$link: $light-blue;
+$link: $darkblue;
+
+
 
 // Class Variables
 $card-background-color: $light-light-grey;
+$section-padding: .5em 0em;
 
 .alert-shown {
     opacity: 1;
@@ -29,6 +32,12 @@ $card-background-color: $light-light-grey;
 
 
 // Import File Styling
+.Title {
+  font-size: larger;
+  font-weight: bold;
+  color: #555;
+}
+
 .Card {
   background-color: white;
   padding: 32px;
@@ -115,3 +124,8 @@ $card-background-color: $light-light-grey;
 
 
 @import "../node_modules/bulma/bulma.sass";
+
+.select { width:100%; padding-bottom: 1em; }
+.select select[multiple] { width: 100%; height: 20em; vertical-align: top; padding-bottom: .5em;}
+.select select[multiple] option { padding: .2em 1em;}
+option { white-space: pre; font-size: .9em; min-height: 1.2em; height: 1.2em;}

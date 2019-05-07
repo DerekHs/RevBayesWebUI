@@ -16,6 +16,7 @@ export default class ListOfConstraints extends React.Component {
           <div>
             {Object.keys(this.props.treeConstraints).map(constraint => (
               <Constraint
+                key={constraint}
                 constraint={constraint}
                 handleClick={this.props.handleClick}
                 handlePlaceClick={this.props.handlePlaceClick}

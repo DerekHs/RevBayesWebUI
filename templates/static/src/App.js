@@ -144,21 +144,23 @@ class App extends Component {
 
 
                   {/* Button to Create Constraint */}
-                  <button 
-                    className="button is-primary is-outlined"
-                    onClick={() => {
-                      const inputId = document.getElementById("nameTreeConstraint").value;
-                      document.getElementById("nameTreeConstraint").value='';
-                      
-                      this.props.addConstraint(inputId, {inputId: {
-                        'leftPartition': this.state.data.columns['column-1'], 
-                        'rightPartition': this.state.data.columns['column-2'],
-                        }
-                      
-                    })}}
-                  >
-                    Create Constraint
-                  </button>
+                  <div className='section'>
+                    <button 
+                      className="button is-primary is-outlined"
+                      onClick={() => {
+                        const inputId = document.getElementById("nameTreeConstraint").value;
+                        document.getElementById("nameTreeConstraint").value='';
+                        
+                        this.props.addConstraint(inputId, {inputId: {
+                          'leftPartition': this.state.data.columns['column-1'], 
+                          'rightPartition': this.state.data.columns['column-2'],
+                          }
+                        
+                      })}}
+                    >
+                      Create Constraint
+                    </button>
+                  </div>
 
                   {/* Reset Button calls f: resetData */}
                   <button 
@@ -188,7 +190,6 @@ class App extends Component {
                             }
                           }
                         }})
-                        debugger;
                       }
                       }
                   />
