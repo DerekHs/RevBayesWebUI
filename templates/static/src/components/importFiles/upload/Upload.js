@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 import { addAnimal, addConstraint, removeConstraint } from '../../../actions/species.js';
 
 
+import Dropzone from '../dropzone/Dropzone.js'
+
 class Upload extends React.Component {
 
     constructor(props) {
@@ -16,9 +18,31 @@ class Upload extends React.Component {
 
 
     render() {
-        return (
-            <div className="file is-centered is-large" onSubmit={this.onFormSubmit} style={{position:'relative'}}>
-                <label className="file-label">
+            return (
+                <div className="Upload">
+                    <span className="Title">Import Nexus Files</span>
+                    <div className="Content">
+                        <Dropzone
+                            onFilesAdded={this.props.handleChange}
+                            disabled={false}
+                        />
+                    <div />
+                    <div className="Files">
+                        {this.props.appState.files.map(file => {
+                            return (
+                                <div key={file} className="Row">
+                                    <img
+                                        alt="file"
+                                        className="FileIcon"
+                                        src="../../public/iconfinder_file-text_298777.svg"
+                                    />
+                                    <span className="Filename">{file}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+                {/* <label className="file-label">
                     <input 
                         className="file-input"
                         onChange={(e) => this.props.handleChange(e)}
@@ -32,8 +56,9 @@ class Upload extends React.Component {
                             Choose File(s)...
                         </span>
                     </span>
-                </label>    
+                </label>     */}
             </div>
+            
         )
     }
 }

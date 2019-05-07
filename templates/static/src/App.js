@@ -37,9 +37,9 @@ class App extends Component {
   } 
 
 
-  // Sets the active tab
+  // Sets the active tab 
   setActiveTab(new_active) {
-    this.setState({...this.state, active_tab: new_active })
+    (this.props.appState.files.length > 0) ? this.setState({...this.state, active_tab: new_active, data: resetData(this.props.appState.species)}) : alert("No Files Imported")
   }
 
 
@@ -68,7 +68,7 @@ class App extends Component {
               <a onClick={() => this.setActiveTab(2)}>Substitution Model</a>
             </li>
             <li className={this.state.active_tab === 3 ? "is-active" : undefined}>
-              <a onClick={() => this.state.active_tab !== 3 ? this.setActiveTab(3): resetData(this.props.appState.species)}>Tree Constraints</a>
+              <a onClick={() => this.setActiveTab(3)}>Tree Constraints</a>
             </li>
             <li className={this.state.active_tab === 4 ? "is-active" : undefined}>
               <a onClick={() => this.setActiveTab(4)}>Code</a>
