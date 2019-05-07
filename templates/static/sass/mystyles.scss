@@ -17,4 +17,14 @@ $link: $light-blue;
 // Class Variables
 $card-background-color: $light-light-grey;
 
+.alert-shown {
+    opacity: 1;
+    transition: all 250ms linear;
+  }
+  
+.alert-hidden {
+    opacity: 0;
+    transition: all 250ms linear;
+}
+
 @import "../node_modules/bulma/bulma.sass";

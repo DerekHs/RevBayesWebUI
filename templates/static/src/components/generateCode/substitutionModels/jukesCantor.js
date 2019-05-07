@@ -22,8 +22,8 @@ export function jukesCantor(state) {
 
     // Variable that formats all functions depending on if outgroup specified or not
     var outGroupFormat
-    ('outGroup' in jcState) ? outGroupVar = ", outgroup=out_group" : outGroupVar = ""
-
+    ('outGroup' in jcState) ? outGroupFormat = ", outgroup=out_group" : outGroupFormat = ""
+    
     text['topologyComments'] ='\n\n# We will assume that all possible labeled, unrooted tree topologies have equal probability. '
         + '\n# This is the dnUniformTopology() distribution in RevBayes.'
     text['topology'] = '\ntopology ~ dnUniformTopology(taxa' + outGroupFormat + ')'

@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700");
+.alert-shown {
+  opacity: 1;
+  transition: all 250ms linear; }
+
+.alert-hidden {
+  opacity: 0;
+  transition: all 250ms linear; }
+
 /*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
