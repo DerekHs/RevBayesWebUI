@@ -25,10 +25,12 @@ class JukesCantor extends React.Component {
         this.handleClickShowAlert = this.handleClickShowAlert.bind(this)
     }
 
+    // Change the Disabled status of the Input Field 
     handleChange() {
         document.getElementById("outGroupInput").disabled = !document.getElementById("outGroupInput").disabled
     }
 
+    // Show the alert for 2000 ms then make it disappear
     handleClickShowAlert() {
         this.setState({
           showingAlert: true
@@ -41,23 +43,28 @@ class JukesCantor extends React.Component {
         }, 2000);
       }
 
+    // Add Inputted OutGroup to the parameters
     handleInput() {
         this.state.params = {...this.state.params, ['outGroup']: document.getElementById("outGroupInput").value}
     }
 
+    // Add the model with the given parameters to the appState
     addParams() {
         this.props.addSubModel('JukesCantor', this.state.params)
         this.handleClickShowAlert()
     }
 
+    // Remove the JukesCantor Model
     removeModel() {
         this.props.remSubModel('JukesCantor')
     }
 
+    // Add the Number of Runs to the parameters
     specifyNRuns() {
         this.state.params = {...this.state.params, ['nruns']: document.getElementById("nRunsInput").value}
     }
 
+    // Add the Number of Generations to the parameters
     specifyGens() {
         this.state.params = {...this.state.params, ['ngens']: document.getElementById("nGensInput").value}
     }
@@ -85,17 +92,10 @@ class JukesCantor extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='column'>
+                    <div className='column one-third'>
                         <div className='box'>
-                            <button className='button is-primary is-outlined' onClick={this.addParams}>
-                                Add/Update Jukes-Cantor Model
-                            </button>
-                            <button className='button is-primary is-outlined' onClick={this.removeModel}>
-                                Remove Jukes-Cantor Model
-                            </button>
-                            <div className={`alert alert-success ${this.state.showingAlert ? 'alert-shown' : 'alert-hidden'}`}>
-                                <strong>Jukes-Cantor Model</strong> added!
-                            </div>
+                            <h1><strong>More Information</strong> about <a href="https://www.sciencedirect.com/science/article/pii/B9781483232119500097?via%3Dihub" target="_blank">Jukes-Cantor</a> Substitution Model:</h1>
+                            <a href="https://revbayes.github.io/tutorials/ctmc/" target="_blank">https://revbayes.github.io/tutorials/ctmc/</a>
                         </div>
                     </div>
                 
@@ -125,6 +125,19 @@ class JukesCantor extends React.Component {
                                 placeholder="# of Generations"
                                 onInput={this.specifyGens}
                             />
+                        </div>
+                        <div className='section'>
+                            <div className='section'>
+                                <button className='button is-primary' onClick={this.addParams}>
+                                    Add/Update Model
+                                </button>
+                            </div>
+                            <button className='button is-primary' onClick={this.removeModel}>
+                                Remove Model
+                            </button>
+                            <div className={`alert alert-success ${this.state.showingAlert ? 'alert-shown' : 'alert-hidden'}`}>
+                                <strong>Jukes-Cantor Model</strong> successfully added!
+                            </div>
                         </div>
                     </div>
 

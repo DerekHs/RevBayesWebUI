@@ -213,14 +213,6 @@ class App extends Component {
           <div className="intro-columns">
             <div className="intro-column is-content">
               <div className='intro-content'>
-                <h1
-                  className='title intro-title'>
-                  Download or
-                  Copy the
-                  RevBayes file and run it!
-                </h1>
-
-
 
                 {/* Generate Button Component */}
                 <GenerateButton 

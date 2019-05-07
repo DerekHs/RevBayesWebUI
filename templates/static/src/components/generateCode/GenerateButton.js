@@ -47,15 +47,11 @@ class GenerateButton extends React.Component {
 
                     {/* Generate Button */}
                     <button 
-                        className='button is-primary'
-                        style={{display: 'inline', margin: '8px 16px', padding:'8px 20px', backgroundColor: '#686a69', border: '0',
-                        color: '#f9fdfe', fontFamily: 'lato, sans-serif', fontSize: '100%', 
-                        letterSpacing: '0.05em', lineHeight: '1.5', textTransform: 'uppercase',
-                        WebKitTransition: '150ms all linear', transition: '150ms all linear'   
-                        }}
+                        className='button is-primary is-rounded'
+                        style={{ WebKitTransition: '150ms all linear', transition: '150ms all linear'}}
                         onClick={() => this.handleChange(true)}
                         type='submit'>
-                        Generate Code!
+                        Generate
                     </button>
                     </p>
                 </div>
