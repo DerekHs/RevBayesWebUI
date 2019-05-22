@@ -1,5 +1,6 @@
 import './substitutionModels/jukesCantor.js';
 import { jukesCantor } from './substitutionModels/jukesCantor.js';
+import { mcmcParams } from './mcmcParams.js';
 
 export function codeGenerate(state) {
     
@@ -14,7 +15,6 @@ export function codeGenerate(state) {
         '\n# (Alternatively change the path from data/filename to the intended path)'
     
     text['loadFile'] = '\ndata <- readDiscreteCharacterData("data/' + state.files[0] + '")'
-
 
     // Specify useful variables
     text['usefulVarComments'] = '\n\n# Set some useful variables: Number of Taxa, Number of Branches, and Taxa'
@@ -32,15 +32,17 @@ export function codeGenerate(state) {
     
 
     // Check through Substitution Models
-    Object.keys(state.subModels).map(key =>
+    state.subModels.map(key =>
         {switch(key) {
             case 'JukesCantor':
                 text['jcSub'] = (jukesCantor(state));
-            
+                text['mcmcParams'] = (mcmcParams(state));
                 break;
             default: 
-                return
-        }
+                console.log(key)
+                console.log(state.subModels)
+                return 
+            }   
         }
     )
 

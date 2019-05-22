@@ -1,11 +1,12 @@
-import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT, ADD_SUB_MODEL, REM_SUB_MODEL, ADD_FILE_NAME } from '../actions/actions.js';
+import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT, ADD_SUB_MODEL, REM_SUB_MODEL, ADD_FILE_NAME, ADD_MCMC_PARAMS } from '../actions/actions.js';
 
 const initialState = {
   species: [],
   treeConstraints : {},
   dataPartition: "",
-  subModels: {},
-  files: []
+  subModels: [],
+  files: [],
+  mcmcParams: {}
 }
 
 const appState = (state = initialState, action) => {
@@ -18,16 +19,13 @@ const appState = (state = initialState, action) => {
       const { [action.name]: value, ...withoutFirst } = state.treeConstraints;
       return {...state, treeConstraints: withoutFirst}
     case ADD_SUB_MODEL:
-      return {...state, subModels: {...state.subModels, [action.name]: action.params}}
+      return {...state, subModels: [...state.subModels, action.name]}
     case REM_SUB_MODEL:
-      if (action.name in state.subModels) {
-        const { [action.name]: value, ...withoutFirst } = state.subModels;
-        return {...state, subModels: withoutFirst}
-      } else {
-        return state
-      }
+      return {...state, subModels: state.subModels.filter(item => item !== action.name)}
     case ADD_FILE_NAME:
       return {...state, files: state.files.concat(action.name)}
+    case ADD_MCMC_PARAMS:
+      return {...state, mcmcParams: {...state.mcmcParams, [action.name]: action.params}}
     default: 
       return state;
   }

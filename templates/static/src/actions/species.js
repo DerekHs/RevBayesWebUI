@@ -1,4 +1,4 @@
-import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT, ADD_SUB_MODEL, ADD_FILE_NAME, REM_SUB_MODEL } from './actions';
+import { ADD_ANIMAL, ADD_CONSTRAINT, REMOVE_CONSTRAINT, ADD_SUB_MODEL, ADD_FILE_NAME, REM_SUB_MODEL, ADD_MCMC_PARAMS } from './actions';
 
 export function addAnimal (animal) {
     return {
@@ -25,8 +25,7 @@ export function removeConstraint (name) {
 export function addSubModel (name, params) {
     return {
         type: ADD_SUB_MODEL,
-        name: name,
-        params: params
+        name: name
     }
 }
 
@@ -41,5 +40,13 @@ export function remSubModel(name) {
     return {
         type: REM_SUB_MODEL,
         name: name
+    }
+}
+
+export function addMCMCParams(name, params) {
+    return{
+        type: ADD_MCMC_PARAMS,
+        name: name,
+        params: params
     }
 }

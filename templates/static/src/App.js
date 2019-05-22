@@ -23,6 +23,9 @@ import Title from "./components/title/Title.js";
 // Substitution Model
 import SubChoices from "./components/substitutionModel/SubChoices.js";
 
+// MCMC Specifications
+import Mcmc from "./components/mcmc/Mcmc.js";
+
 
 class App extends Component {
   constructor(props) {
@@ -62,7 +65,7 @@ class App extends Component {
         <div className="tabs">
           <ul>
             <li className={this.state.active_tab === 1 ? "is-active" : undefined}>
-              <a onClick={() => this.setActiveTab(1)}>File</a>
+              <a onClick={() => this.setActiveTab(1)}>Data</a>
             </li>
             <li className={this.state.active_tab === 2 ? "is-active" : undefined}>
               <a onClick={() => this.setActiveTab(2)}>Substitution Model</a>
@@ -70,8 +73,13 @@ class App extends Component {
             <li className={this.state.active_tab === 3 ? "is-active" : undefined}>
               <a onClick={() => this.setActiveTab(3)}>Tree Constraints</a>
             </li>
+            
             <li className={this.state.active_tab === 4 ? "is-active" : undefined}>
-              <a onClick={() => this.setActiveTab(4)}>Code</a>
+              <a onClick={() => this.setActiveTab(4)}>MCMC</a>
+            </li>
+
+            <li className={this.state.active_tab === 5 ? "is-active" : undefined}>
+              <a onClick={() => this.setActiveTab(5)}>Code</a>
             </li>
           </ul>
         </div>
@@ -85,14 +93,13 @@ class App extends Component {
         {/* Substitution Model Tab */}
         {this.state.active_tab === 2 && <SubChoices/>}
 
-
         {/*  ------------------  */}
-        { /* Tree Constraint Tab */}
+        { /* Tree Model Tab */}
         {/*  ------------------  */}
         
         {this.state.active_tab === 3 && 
           <div className="level">
-              <div className="columns is-multiline is-mobile">
+              <div className="columns is-multiline is-mobile" style={{width: '100%'}}>
                 
                 {/* Left Partition Column */}
                 <Column 
@@ -167,7 +174,6 @@ class App extends Component {
                     className="button is-primary is-outlined"
                     onClick={() => this.setState({...this.state, 
                         data: resetData(this.props.appState.species)})}
-                    
                   >
                     Reset the Columns
                   </button>
@@ -206,10 +212,20 @@ class App extends Component {
 
         {/* END OF TREE CONSTRAINTS TAB */}
 
+
+        {/* Markov Chain Monte Carlo Tab. */}
+        {this.state.active_tab === 4 &&
+            <Mcmc
+              currentState={this.props.appState}
+            />
+        }
+
+
+
         {/*                   */}
         {/* CODE GENERATE TAB */}
         {/*                   */}
-        {this.state.active_tab === 4 && 
+        {this.state.active_tab === 5 && 
           <div className="intro-columns">
             <div className="intro-column is-content">
               <div className='intro-content'>

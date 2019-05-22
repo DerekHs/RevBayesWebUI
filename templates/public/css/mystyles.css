@@ -7034,3 +7034,8 @@ option {
   font-size: .9em;
   min-height: 1.2em;
   height: 1.2em; }
+
+.button button[is-primary] {
+  padding: 5px 12px;
+  margin: 15px 12px;
+  width: 10em; }

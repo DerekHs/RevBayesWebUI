@@ -22,7 +22,7 @@ class GenerateButton extends React.Component {
 
         // Changing the content of the upload file
         dataContainer.textContent = codeGenerate(this.props.currentState);
-
+        document.getElementById('json-download').style.display = '';
         document.getElementById('results').style.display = 'block';
 
         var blob = new Blob([dataContainer.textContent], {type: "application/json"});
@@ -40,43 +40,39 @@ class GenerateButton extends React.Component {
         return (
             <div
                 style={{width: '100%'}}
-                align='center'>
-                <div className="level">
-                    <p style={{width: '100%'}}>
-
-
-                    {/* Generate Button */}
-                    <button 
-                        className='button is-primary is-rounded'
-                        style={{ WebKitTransition: '150ms all linear', transition: '150ms all linear'}}
-                        onClick={() => this.handleChange(true)}
-                        type='submit'>
-                        Generate
-                    </button>
-                    </p>
-                </div>
-
+                align='left'>
                 <div 
                     id="results"
                     style={{display: 'none'}}
                 >
-                    <a 
-                        className='button is-primary' 
-                        style={{display: 'inline', margin: '8px 16px', padding:'8px 20px', backgroundColor: '#686a69', border: '0',
-                        color: '#f9fdfe', fontFamily: 'lato, sans-serif', fontSize: '100%', 
-                        letterSpacing: '0.05em', lineHeight: '1.5', textTransform: 'uppercase',
-                        WebKitTransition: '150ms all linear', transition: '150ms all linear'}}  
-                        id="json-download" 
-                        data-file='revscript.Rev'></a>
                     <pre 
                         style={{marginTop: '1.5rem'}}
                         className="level">
                        <code 
-                            style={{textAlign: 'left'}}
+                            style={{textAlign: 'left', height: '550px'}}
                             className='resultsContainer'>
                        </code>
                     </pre>
                 </div>  
+                <div className="level">
+                    <p style={{width: '100%'}}>
+                        {/* Generate Button */}
+                        <button 
+                            className='button is-primary'
+                            style={{ fontWeight: 'bold', margin: '15px 12px', width: '10em', height: '3em', WebKitTransition:  '150ms all linear', transition: '150ms all linear'}}
+                            onClick={() => this.handleChange(true)}
+                            type='submit'>
+                            Generate
+                        </button>
+                        {/* Download Button */}
+                        <a 
+                            className='button is-primary is-outlined' 
+                            style={{ fontWeight: 'bold', margin: '15px 12px', width: '10em', height: '3em', display: 'none', WebKitTransition: '150ms all linear', transition: '150ms all linear'}}  
+                            id="json-download" 
+                            data-file='revscript.Rev'>
+                        </a>
+                    </p>
+                </div>
             </div>
         )
     }
