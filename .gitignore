@@ -16,7 +16,7 @@ node_modules
 
 # production
 /build
-*index.html
+
 *.pyc
 
 # misc
@@ -31,6 +31,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.nex
-*Parser.js
-*Dropzone.js
-*Upload.js

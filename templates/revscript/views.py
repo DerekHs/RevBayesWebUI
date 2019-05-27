@@ -47,13 +47,13 @@ def fileUpload():
         filename = secure_filename(file.filename)
 
         """ Temporarily saves file to templates/api/upload """
-        file.save(os.path.join('./templates/api/upload', filename))
+        file.save(os.path.join('./RevBayesWebUI/templates/api/upload', filename))
 
         """ Parses the file and retrieves a dict of taxa """
         taxa = pythonParser(filename)
 
         """ Deletes file after use """
-        os.remove(os.path.join('./templates/api/upload', filename))
+        os.remove(os.path.join('./RevBayesWebUI/templates/api/upload', filename))
 
         return jsonify(taxa)
 

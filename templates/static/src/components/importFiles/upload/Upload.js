@@ -34,7 +34,7 @@ class Upload extends React.Component {
                                     <img
                                         alt="file"
                                         className="FileIcon"
-                                        src="../../public/iconfinder_file-text_298777.svg"
+                                        src="RevBayesWebUI/templates/public/iconfinder_file-text_298777.svg"
                                     />
                                     <span className="Filename">{file}</span>
                                 </div>

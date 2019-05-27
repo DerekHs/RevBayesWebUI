@@ -83,7 +83,7 @@ class Dropzone extends Component {
         <img
           alt="upload"
           className="Icon"
-          src="../../public/baseline-cloud_upload-24px.svg"
+          src="RevBayesWebUI/templates/public/baseline-cloud_upload-24px.svg"
         />
         <span>Drag or Click to Import</span>
       </div>
