@@ -3,9 +3,18 @@ import React from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 
-
+// Redux actions
 import { remSubModel, addSubModel } from '../../actions/species.js';
 
+// Import MathJax for math formatting
+import MathJax from 'react-mathjax2';
+
+
+const jcRateMatrixTex = `Q_{JC69} = \\left( \\begin{array}{cccc}
+    * & 1/3 & 1/3 & 1/3 \\\\
+    1/3 & * & 1/3 & 1/3 \\\\
+    1/3 & 1/3 & * & 1/3 \\\\
+    1/3 & 1/3 & 1/3 & * \\end{array} \\right)`
 
 // Class Substitution Model Component
 class JukesCantor extends React.Component {
@@ -45,11 +54,17 @@ class JukesCantor extends React.Component {
     }
 
 
+
     render() {
         return (
             <div className='container'>
                 <div className='columns'>
-                    <div className='column one-half'>
+                    <div className='column one-third'>
+                        <MathJax.Context input='tex'>
+                            <div>
+                                <MathJax.Node inline>{jcRateMatrixTex}</MathJax.Node>
+                            </div>
+                        </MathJax.Context>
                     </div>
                     <div className='column one-third'>
                         <div className='box'>
@@ -79,10 +94,8 @@ class JukesCantor extends React.Component {
 
                 </div>
             </div>
-            
         )
     }
-
 }
 
 
@@ -90,15 +103,15 @@ function mapStateToProps(state) {
     return {
       appState: state.appState
     }
-  }
+}
   
-  function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-      addSubModel,
-      remSubModel
+        addSubModel,
+        remSubModel
     },
-      dispatch)
-  }
+        dispatch)
+}
   
-  export default connect(mapStateToProps, mapDispatchToProps)(JukesCantor);
+export default connect(mapStateToProps, mapDispatchToProps)(JukesCantor);
   
